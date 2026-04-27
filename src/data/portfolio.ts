@@ -42,7 +42,7 @@ export const personal = {
 Outside of code, I've taught computing to seniors and children in my community, worked on a humanoid robot, and cooking good food.`,
   github: 'https://github.com/blade9523411',
   linkedin: 'https://linkedin.com/in/jlalukota', 
-  resume: '/resume.pdf', // place your PDF in the public/ folder
+  resume: '/resume.pdf',
   email: 'jlalukota@gmail.com',
   profileImageSrc: '/images/profile.jpg', // uncomment when you have a photo
   profileImageAlt: 'Jayanth Lalukota — profile photo',
@@ -67,15 +67,16 @@ export const projects: Project[] = [
       'A Kubernetes operator written in Go that orchestrates distributed ML training jobs with fault tolerance, auto-scaling, and resource-aware scheduling.',
     tags: ['Go', 'Kubernetes', 'Operators', 'ML Ops', 'Docker'],
     github: 'https://github.com/blade9523411/ml-training-controller', // TODO: update to specific repo
+    imageSrc: '/images/imagek8.png',
     imageAlt: 'Kubernetes ML Training Controller — architecture diagram',
   },
   {
     id: 'detour-rl',
-    title: 'DETOUR RL Traffic Occupancy',
+    title: 'Multi-Agent RL for Constrained Traffic Systems (AFRL)',
     description:
-      'A reinforcement learning environment for learning traffic signal control policies that minimise road occupancy and improve throughput.',
+      'Worked on reinforcement learning in large-scale graph-based environments with constraints like limited capacity, delayed rewards, and restricted actions. Focused on analyzing system behavior under adversarial or non-ideal conditions.',
     tags: ['Python', 'PyTorch', 'Reinforcement Learning', 'Simulation'],
-    github: 'https://github.com/jlalukota', // TODO: update to specific repo
+    imageSrc: '/images/pemssf.jpg', 
     imageAlt: 'DETOUR — RL agent controlling a traffic grid',
   },
   {
@@ -102,7 +103,7 @@ export const projects: Project[] = [
     id: 'marine-robotics-rl',
     title: 'Humanoids-Legs RL',
     description:
-      'Team effort on reinforcement learning policies for underwater and humanoid robotic platforms, focusing on locomotion in unstructured environments.',
+      'Worked on developing model predictive controllers for underwater robots.',
     tags: ['Python', 'PyTorch', 'Robotics', 'RL', 'Sim-to-Real'],
     github: 'https://github.com/jlalukota', // TODO: update to specific repo
     imageAlt: 'Marine robotics RL — simulated underwater robot',
@@ -114,13 +115,14 @@ export const projects: Project[] = [
 export const experience: ExperienceItem[] = [
   {
     id: 'afrl',
-    role: 'Software Engineering Intern',
+    role: 'AI Research Intern',
     org: 'Air Force Research Laboratory',
-    period: '2024',
+    period: '2025',
     location: 'Rome, NY',
     bullets: [
-      'TODO: add what you built / owned at AFRL.',
-      'TODO: quantify impact where possible.',
+      'Designed a graph-based multi-agent traffic simulation (3,000-node network, 1,000+ agents) to study behavior under constrained and adversarial conditions.',
+      'Trained and evaluated reinforcement learning policies (shared vs independent) to optimize routing and evade detection under system constraints.',
+      'Generated 12M+ state–action samples to train time-series classifiers for incident detection and pattern recognition.',
     ],
     tags: ['Systems', 'Research'],
   },
@@ -131,7 +133,7 @@ export const experience: ExperienceItem[] = [
     period: '2026 – present',
     location: 'University of Wisconsin--Madison',
     bullets: [
-      'Assists in controller work on underwater and robotic platforms.',
+      'Contributed to control system development for underwater robotic platforms, focusing on stability and actuation in constrained environments',
       
     ],
     tags: ['Robotics', 'Controllers', 'Research'],
@@ -143,8 +145,8 @@ export const experience: ExperienceItem[] = [
     period: '2024 – 2025',
     location: 'San Francisco, CA',
     bullets: [
-      'Assists in controller work on underwater and robotic platforms.',
-      'Assists in controller work on underwater and robotic platforms.',
+      'Engineered automation workflows for sales operations, eliminating repetitive manual processes and improving team efficiency by 96%.',
+      'Maintained and optimized CRM data pipelines across 300+ hospital records to support targeted outreach',
       
     ],
     tags: ['Robotics', 'Controllers', 'Research'],
@@ -156,8 +158,8 @@ export const experience: ExperienceItem[] = [
     period: '2022 – present',
     location: 'Clifton Park, NY',
     bullets: [
-      'Founded and run a programme teaching programming fundamentals to students',
-      'TODO: add enrolment numbers, curriculum details, or outcomes.',
+      'Led a community program teaching programming and digital skills to 500+ students and seniors through structured workshops and 1:1 sessions',
+      'Built partnerships with schools, libraries, and senior centers to run recurring programs and expand reach.',
     ],
     tags: ['Education', 'Leadership'],
   },
