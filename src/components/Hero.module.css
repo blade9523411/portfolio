@@ -1,0 +1,168 @@
+.hero {
+  min-height: 100svh;
+  display: flex;
+  align-items: stretch;
+  padding-top: 80px; /* navbar height */
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: clamp(40px, 6vw, 80px);
+  padding-bottom: clamp(40px, 6vw, 72px);
+  width: 100%;
+}
+
+/* ── Top row ───────────────────────────────────────────────────────────────── */
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.available {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4caf50;
+  flex-shrink: 0;
+}
+
+/* ── Name ──────────────────────────────────────────────────────────────────── */
+.nameBlock {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.name {
+  font-size: clamp(4.5rem, 13vw, 13rem);
+  line-height: 0.88;
+  letter-spacing: -0.04em;
+  color: var(--text);
+}
+
+.nameLine {
+  display: block;
+}
+
+.nameLine:nth-child(2) {
+  /* Slight editorial indent */
+  padding-left: clamp(0px, 2vw, 32px);
+}
+
+/* ── Bottom row ────────────────────────────────────────────────────────────── */
+.bottom {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  align-items: end;
+  gap: 12px 48px;
+}
+
+.role {
+  grid-column: 1;
+  grid-row: 1;
+  font-size: clamp(0.9rem, 1.6vw, 1.1rem);
+  font-weight: 400;
+  color: var(--text-muted);
+  max-width: 480px;
+  line-height: 1.5;
+}
+
+.bio {
+  grid-column: 1;
+  grid-row: 2;
+  font-size: clamp(0.85rem, 1.4vw, 1rem);
+  color: var(--text-muted);
+  max-width: 400px;
+  line-height: 1.6;
+}
+
+.links {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+/* ── Scroll hint ───────────────────────────────────────────────────────────── */
+.scrollHint {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding-top: 32px;
+}
+
+.scrollLine {
+  display: block;
+  width: 1px;
+  height: 48px;
+  background: var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.scrollLine::after {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: var(--accent-light);
+  animation: scrollDrop 1.8s var(--ease) infinite;
+}
+
+@keyframes scrollDrop {
+  0%   { top: -100%; }
+  100% { top: 100%; }
+}
+
+.scrollLabel {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transform: rotate(90deg) translateX(4px);
+  transform-origin: left center;
+  white-space: nowrap;
+}
+
+/* ── Responsive ────────────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .bottom {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 16px;
+  }
+
+  .links {
+    grid-column: 1;
+    grid-row: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .scrollHint { display: none; }
+
+  .nameLine:nth-child(2) { padding-left: 0; }
+}

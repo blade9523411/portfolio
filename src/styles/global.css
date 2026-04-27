@@ -1,0 +1,194 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   Global styles & CSS custom properties
+   ───────────────────────────────────────────────────────────────────────────── */
+
+/* ── Reset ─────────────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── CSS Variables ─────────────────────────────────────────────────────────── */
+:root {
+  /* Colors */
+  --bg:           #00121D;
+  --bg-warm:      #002D3A;
+  --bg-dark:      #00121D;
+  --text:         #f2f2f2;
+  --text-muted:   #D2D6D5;
+  --text-on-dark: #f2f2f2;
+  --accent:       #88B9B7;
+  --accent-light: #88B9B7;
+  --border:       #88B9B7;
+  --border-dark:  #344747;
+
+  /* Typography */
+  --font-heading: 'Syne', system-ui, sans-serif;
+  --font-body:    'DM Sans', system-ui, sans-serif;
+
+  /* Spacing */
+  --section-py:   clamp(80px, 12vw, 140px);
+  --container:    1240px;
+  --gutter:       clamp(20px, 5vw, 60px);
+
+  /* Transitions */
+  --ease:         cubic-bezier(0.16, 1, 0.3, 1);
+  --duration:     0.55s;
+}
+
+/* ── Base ──────────────────────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ── Typography ────────────────────────────────────────────────────────────── */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.015em;
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ── Layout helpers ────────────────────────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* ── Section heading pattern ───────────────────────────────────────────────── */
+.section-label {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.section-label::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 40px;
+  background: var(--border);
+}
+
+.section-heading {
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  margin-bottom: clamp(48px, 8vw, 80px);
+}
+
+/* ── Reveal animation ──────────────────────────────────────────────────────── */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity var(--duration) var(--ease),
+    transform var(--duration) var(--ease);
+}
+
+[data-reveal="delay-1"] { transition-delay: 0.08s; }
+[data-reveal="delay-2"] { transition-delay: 0.16s; }
+[data-reveal="delay-3"] { transition-delay: 0.24s; }
+[data-reveal="delay-4"] { transition-delay: 0.32s; }
+[data-reveal="delay-5"] { transition-delay: 0.40s; }
+
+[data-visible="true"][data-reveal] {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Buttons / links ───────────────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 10px 22px;
+  border-radius: 3px;
+  border: 1.5px solid var(--text);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  transition: background var(--duration) var(--ease), color var(--duration) var(--ease);
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background: var(--text);
+  color: var(--bg);
+}
+
+.btn-filled {
+  background: var(--text);
+  color: var(--bg);
+}
+
+.btn-filled:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ── Tag pill ──────────────────────────────────────────────────────────────── */
+.tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 2px;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  background: transparent;
+}
+
+/* ── Scrollbar ─────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+/* ── Focus visible ─────────────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}

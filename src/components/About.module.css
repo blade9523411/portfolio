@@ -1,0 +1,112 @@
+.about {
+  padding: var(--section-py) 0;
+  background: var(--bg);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 720px;
+  gap: clamp(40px, 6vw, 100px);
+  align-items: start;
+}
+
+.heading {
+  margin-bottom: clamp(32px, 5vw, 52px);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.body p {
+  font-size: clamp(0.95rem, 1.4vw, 1.05rem);
+  color: var(--text-muted);
+  line-height: 1.75;
+  max-width: 560px;
+}
+
+.focusList {
+  margin-top: 12px;
+}
+
+.focusLabel {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.focusList ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.focusList li {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.bullet {
+  color: var(--accent-light);
+  flex-shrink: 0;
+}
+
+/* ── Image column ──────────────────────────────────────────────────────────── */
+.imageCol {
+  position: sticky;
+  top: 100px;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: var(--bg-warm);
+  border: 1.5px dashed var(--border);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.placeholderInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-muted);
+}
+
+.placeholderInner p {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Replace the placeholder when you have a photo */
+.imagePlaceholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ── Responsive ────────────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .imageCol {
+    position: static;
+    max-width: 320px;
+  }
+}

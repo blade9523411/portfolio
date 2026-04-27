@@ -1,0 +1,128 @@
+.experience {
+  padding: var(--section-py) 0;
+  background: var(--bg);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ── Experience item ───────────────────────────────────────────────────────── */
+.item {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: clamp(20px, 4vw, 60px);
+  padding: clamp(28px, 5vw, 48px) 0;
+  border-top: 1px solid var(--border);
+  transition: background 0.2s;
+}
+
+.item:last-child {
+  border-bottom: 1px solid var(--border);
+}
+
+.item:hover {
+  background: var(--bg-warm);
+  margin-inline: calc(-1 * var(--gutter));
+  padding-inline: var(--gutter);
+  border-radius: 3px;
+}
+
+/* ── Left meta column ──────────────────────────────────────────────────────── */
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 4px;
+}
+
+.period {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+.location {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+/* ── Right body column ─────────────────────────────────────────────────────── */
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.role {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--text);
+  line-height: 1.1;
+}
+
+.org {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  flex-shrink: 0;
+}
+
+.bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bullets li {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  padding-left: 16px;
+  position: relative;
+}
+
+.bullets li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--border);
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* ── Responsive ────────────────────────────────────────────────────────────── */
+@media (max-width: 700px) {
+  .item {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .meta {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  .item:hover {
+    margin-inline: 0;
+    padding-inline: 0;
+  }
+}
