@@ -7,5 +7,5 @@ import react from '@vitejs/plugin-react'
 // Leave as '/' for Vercel, Netlify, or a custom domain.
 export default defineConfig({
   plugins: [react()],
-  base: '/',
+  base: '/portfolio/',
 })
