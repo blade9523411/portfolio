@@ -44,7 +44,7 @@ Outside of code, I've taught computing to seniors and children in my community, 
   linkedin: 'https://linkedin.com/in/jlalukota', 
   resume: '/resume.pdf',
   email: 'jlalukota@gmail.com',
-  profileImageSrc: `${import.meta.env.BASE_URL}images/profile.jpg`, // uncomment when you have a photo
+  profileImageSrc: `${import.meta.env.BASE_URL}images/profile.JPG`, // uncomment when you have a photo
   profileImageAlt: 'Jayanth Lalukota — profile photo',
 }
 
