@@ -124,7 +124,7 @@ export const experience: ExperienceItem[] = [
       'Trained and evaluated reinforcement learning policies (shared vs independent) to optimize routing and evade detection under system constraints.',
       'Generated 12M+ state–action samples to train time-series classifiers for incident detection and pattern recognition.',
     ],
-    tags: ['Systems', 'Research'],
+    tags: ['Machine Learning','Reinforcement Learning','Systems', 'Research'],
   },
   {
     id: 'marine-robotics-lab',
@@ -149,7 +149,7 @@ export const experience: ExperienceItem[] = [
       'Maintained and optimized CRM data pipelines across 300+ hospital records to support targeted outreach',
       
     ],
-    tags: ['Robotics', 'Controllers', 'Research'],
+    tags: ['Data Engineering', 'Automation', 'Data Pipelines', 'CRM Systems'],
   },
   {
     id: 'community-computing',
@@ -161,7 +161,7 @@ export const experience: ExperienceItem[] = [
       'Led a community program teaching programming and digital skills to 500+ students and seniors through structured workshops and 1:1 sessions',
       'Built partnerships with schools, libraries, and senior centers to run recurring programs and expand reach.',
     ],
-    tags: ['Education', 'Leadership'],
+    tags: ['Education', 'Leadership', 'Community Service'],
   },
   
 ]

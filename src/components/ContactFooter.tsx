@@ -11,14 +11,14 @@ export default function ContactFooter() {
 
         {/* Main CTA */}
         <div className={styles.cta}>
-          <p className={styles.ctaLabel} data-reveal>Get in touch</p>
+          <p className={styles.ctaLabel} data-reveal>-----</p>
           <a
             href={`mailto:${personal.email}`}
             className={styles.ctaHeading}
             data-reveal="delay-1"
             aria-label="Send Jayanth an email"
           >
-            Let's talk.
+            Reach out.
           </a>
           <p className={styles.ctaSub} data-reveal="delay-2">
             Open to internships, research collaborations, and interesting side projects.
