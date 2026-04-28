@@ -44,7 +44,7 @@ Outside of code, I've taught computing to seniors and children in my community, 
   linkedin: 'https://linkedin.com/in/jlalukota', 
   resume: '/resume.pdf',
   email: 'jlalukota@gmail.com',
-  profileImageSrc: '${import.meta.env.BASE_URL}/images/profile.jpg', // uncomment when you have a photo
+  profileImageSrc: `${import.meta.env.BASE_URL}/images/profile.jpg`, // uncomment when you have a photo
   profileImageAlt: 'Jayanth Lalukota — profile photo',
 }
 
@@ -67,7 +67,7 @@ export const projects: Project[] = [
       'A Kubernetes operator written in Go that orchestrates distributed ML training jobs with fault tolerance, auto-scaling, and resource-aware scheduling.',
     tags: ['Go', 'Kubernetes', 'Operators', 'ML Ops', 'Docker'],
     github: 'https://github.com/blade9523411/ml-training-controller', // TODO: update to specific repo
-    imageSrc: '${import.meta.env.BASE_URL}/images/imagek8.png',
+    imageSrc: `${import.meta.env.BASE_URL}/images/imagek8.png`,
     imageAlt: 'Kubernetes ML Training Controller — architecture diagram',
   },
   {
@@ -76,7 +76,7 @@ export const projects: Project[] = [
     description:
       'Worked on reinforcement learning in large-scale graph-based environments with constraints like limited capacity, delayed rewards, and restricted actions. Focused on analyzing system behavior under adversarial or non-ideal conditions.',
     tags: ['Python', 'PyTorch', 'Reinforcement Learning', 'Simulation'],
-    imageSrc: '${import.meta.env.BASE_URL}/images/pemssf.jpg', 
+    imageSrc: `${import.meta.env.BASE_URL}/images/pemssf.jpg`, 
     imageAlt: 'DETOUR — RL agent controlling a traffic grid',
   },
   {
@@ -86,7 +86,7 @@ export const projects: Project[] = [
       'A tool that helps early-stage startups surface leading indicators of product–market fit from user behaviour and survey data.',
     tags: ['Python', 'React', 'PostgreSQL', 'Data Analysis'],
     github: 'https://github.com/blade9523411/middleware_scoring', // TODO: update to specific repo
-    imageSrc: '${import.meta.env.BASE_URL}/images/pmf.jpg', 
+    imageSrc: `${import.meta.env.BASE_URL}/images/pmf.jpg`, 
     imageAlt: 'PMF Finder — dashboard screenshot',
   },
   {
@@ -96,7 +96,7 @@ export const projects: Project[] = [
       'Developed a custom OpenAI Gym trading environment with a random forest regression baseline, incorporating 20+ technical indicators on 5+ years of historical data to model and evaluate strategy performance.',
     tags: ['Python', 'NumPy', 'Simulation', 'Finance'],
     github: 'https://github.com/blade9523411/gabejaystock', // TODO: update to specific repo
-    imageSrc: '${import.meta.env.BASE_URL}/images/stock.jpg', 
+    imageSrc: `${import.meta.env.BASE_URL}/images/stock.jpg`, 
     imageAlt: 'Stock Trading Simulation — portfolio performance chart',
   },
   {
@@ -106,7 +106,7 @@ export const projects: Project[] = [
       'Worked on developing model predictive controllers for underwater robots.',
     tags: ['Python', 'PyTorch', 'Robotics', 'RL', 'Sim-to-Real'],
     github: 'https://github.com/jlalukota', // TODO: update to specific repo
-    imageSrc: '${import.meta.env.BASE_URL}/images/marine-robotics.jpg',
+    imageSrc: `${import.meta.env.BASE_URL}/images/marine-robotics.jpg`,
     imageAlt: 'Marine robotics RL — simulated underwater robot',
   },
 ]
