@@ -95,7 +95,7 @@ export const projects: Project[] = [
     description:
       'Developed a custom OpenAI Gym trading environment with a random forest regression baseline, incorporating 20+ technical indicators on 5+ years of historical data to model and evaluate strategy performance.',
     tags: ['Python', 'NumPy', 'Simulation', 'Finance'],
-    github: 'https://github.com/blade9523411/gabejaystock', // TODO: update to specific repo
+    github: 'https://github.com/blade9523411/Stock-Trading-Simulation', // TODO: update to specific repo
     imageSrc: `${import.meta.env.BASE_URL}images/stock.jpg`, 
     imageAlt: 'Stock Trading Simulation — portfolio performance chart',
   },
