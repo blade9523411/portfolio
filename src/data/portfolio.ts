@@ -5,7 +5,7 @@
 export interface Project {
   id: string
   title: string
-  description: string
+  description: string[]
   tags: string[]
   github?: string    // link to GitHub repo
   demo?: string      // link to live demo
@@ -63,9 +63,10 @@ export const projects: Project[] = [
   {
     id: 'k8s-ml-controller',
     title: 'Kubernetes ML Training Controller',
-    description:
+    description:[
       'Built a Kubernetes controller in Go with Kubebuilder to run ML workloads through a custom TrainingJob CRD, managing Jobs, retries, checkpoint PVCs, and lifecycle status.',
       'Replaced native Job retries with controller-driven run lineage and idempotent reconciliation, validating recovery across 25+ workloads and 30+ failure scenarios.',
+    ],
     tags: ['Go', 'Kubernetes', 'Operators', 'ML Ops', 'Docker'],
     github: 'https://github.com/blade9523411/ml-training-controller', // TODO: update to specific repo
     imageSrc: `${import.meta.env.BASE_URL}images/imagek8.png`,
@@ -74,8 +75,9 @@ export const projects: Project[] = [
   {
     id: 'detour-rl',
     title: 'Multi-Agent RL for Constrained Traffic Systems (AFRL)',
-    description:
+    description:[
       'Worked on reinforcement learning in large-scale graph-based environments with constraints like limited capacity, delayed rewards, and restricted actions. Focused on analyzing system behavior under adversarial or non-ideal conditions.',
+    ],
     tags: ['Python', 'PyTorch', 'Reinforcement Learning', 'Simulation'],
     imageSrc: `${import.meta.env.BASE_URL}images/pemssf.jpg`, 
     imageAlt: 'DETOUR — RL agent controlling a traffic grid',
@@ -83,8 +85,9 @@ export const projects: Project[] = [
   {
     id: 'pmf-finder',
     title: 'PMF Finder - Agentic Scoring Engine',
-    description:
+    description:[
       'Architected a deterministic scoring engine that normalizes company records into five sub-scores: digital maturity, operational complexity, information flow, market pressure, and revenue-based budget capacity.',
+    ],
     tags: ['Python', 'React', 'PostgreSQL', 'Data Analysis'],
     github: 'https://github.com/blade9523411/middleware_scoring', // TODO: update to specific repo
     imageSrc: `${import.meta.env.BASE_URL}images/pmf.jpg`, 
@@ -93,9 +96,10 @@ export const projects: Project[] = [
   {
     id: 'stock-trading-sim',
     title: 'Stock Trading Simulation Environment',
-    description:
+    description:[
       'Built an event-driven quantitative trading simulator across the S&P 100 using intraday yfinance data, APScheduler, Google Cloud Storage persistence, and 15-minute trading cycles.',
       'Trained a RandomForestRegressor with causal rolling features, transaction costs, slippage, backtesting, and walk-forward OOS metrics including Sharpe, drawdown, win rate, and equity curves.',     
+    ],
     tags: ['Python', 'NumPy', 'Simulation', 'Finance'],
     github: 'https://github.com/blade9523411/Stock-Trading-Simulation', // TODO: update to specific repo
     imageSrc: `${import.meta.env.BASE_URL}images/stock.jpg`, 
@@ -104,8 +108,9 @@ export const projects: Project[] = [
   {
     id: 'marine-robotics-rl',
     title: 'Humanoids-Legs RL',
-    description:
+    description:[
       'Worked on developing model predictive controllers for underwater robots.',
+    ],
     tags: ['Python', 'PyTorch', 'Robotics', 'RL', 'Sim-to-Real'],
     github: 'https://github.com/jlalukota', // TODO: update to specific repo
     imageSrc: `${import.meta.env.BASE_URL}images/marine-robotics.jpg`,
