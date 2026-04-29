@@ -42,7 +42,7 @@ export const personal = {
 Outside of code, I've taught computing to seniors and children in my community, worked on a humanoid robot, and cooking good food.`,
   github: 'https://github.com/blade9523411',
   linkedin: 'https://linkedin.com/in/jlalukota', 
-  resume: '/resume.pdf',
+  resume: 'https://docs.google.com/document/d/16A3hFAKmJXwg6nNDJ1eiNRj4N1RXl8oQ/edit?usp=sharing&ouid=109757494867224820483&rtpof=true&sd=true',
   email: 'jlalukota@gmail.com',
   profileImageSrc: `${import.meta.env.BASE_URL}images/profile.JPG`, // uncomment when you have a photo
   profileImageAlt: 'Jayanth Lalukota — profile photo',
@@ -65,7 +65,7 @@ export const projects: Project[] = [
     title: 'Kubernetes ML Training Controller',
     description:[
       'Built a Kubernetes controller in Go with Kubebuilder to run ML workloads through a custom TrainingJob CRD, managing Jobs, retries, checkpoint PVCs, and lifecycle status.',
-      'Replaced native Job retries with controller-driven run lineage and idempotent reconciliation, validating recovery across 25+ workloads and 30+ failure scenarios.',
+      ' Replaced native Job retries with controller-driven run lineage and idempotent reconciliation, validating recovery across 25+ workloads and 30+ failure scenarios.',
     ],
     tags: ['Go', 'Kubernetes', 'Operators', 'ML Ops', 'Docker'],
     github: 'https://github.com/blade9523411/ml-training-controller', // TODO: update to specific repo
@@ -98,7 +98,7 @@ export const projects: Project[] = [
     title: 'Stock Trading Simulation Environment',
     description:[
       'Built an event-driven quantitative trading simulator across the S&P 100 using intraday yfinance data, APScheduler, Google Cloud Storage persistence, and 15-minute trading cycles.',
-      'Trained a RandomForestRegressor with causal rolling features, transaction costs, slippage, backtesting, and walk-forward OOS metrics including Sharpe, drawdown, win rate, and equity curves.',     
+      ' Trained a RandomForestRegressor with causal rolling features, transaction costs, slippage, backtesting, and walk-forward OOS metrics including Sharpe, drawdown, win rate, and equity curves.',     
     ],
     tags: ['Python', 'NumPy', 'Simulation', 'Finance'],
     github: 'https://github.com/blade9523411/Stock-Trading-Simulation', // TODO: update to specific repo
@@ -109,7 +109,7 @@ export const projects: Project[] = [
     id: 'marine-robotics-rl',
     title: 'Humanoids-Legs RL',
     description:[
-      'Worked on developing model predictive controllers for underwater robots.',
+      'Worked on developing the Reinforcement Learning algorithm for the Humanoids-Legs .',
     ],
     tags: ['Python', 'PyTorch', 'Robotics', 'RL', 'Sim-to-Real'],
     github: 'https://github.com/jlalukota', // TODO: update to specific repo
