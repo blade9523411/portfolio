@@ -64,7 +64,8 @@ export const projects: Project[] = [
     id: 'k8s-ml-controller',
     title: 'Kubernetes ML Training Controller',
     description:
-      'A Kubernetes operator written in Go that orchestrates distributed ML training jobs with fault tolerance, auto-scaling, and resource-aware scheduling.',
+      'Built a Kubernetes controller in Go with Kubebuilder to run ML workloads through a custom TrainingJob CRD, managing Jobs, retries, checkpoint PVCs, and lifecycle status.',
+      'Replaced native Job retries with controller-driven run lineage and idempotent reconciliation, validating recovery across 25+ workloads and 30+ failure scenarios.',
     tags: ['Go', 'Kubernetes', 'Operators', 'ML Ops', 'Docker'],
     github: 'https://github.com/blade9523411/ml-training-controller', // TODO: update to specific repo
     imageSrc: `${import.meta.env.BASE_URL}images/imagek8.png`,
@@ -83,7 +84,7 @@ export const projects: Project[] = [
     id: 'pmf-finder',
     title: 'PMF Finder - Agentic Scoring Engine',
     description:
-      'A tool that helps early-stage startups surface leading indicators of product–market fit from user behaviour and survey data.',
+      'Architected a deterministic scoring engine that normalizes company records into five sub-scores: digital maturity, operational complexity, information flow, market pressure, and revenue-based budget capacity.',
     tags: ['Python', 'React', 'PostgreSQL', 'Data Analysis'],
     github: 'https://github.com/blade9523411/middleware_scoring', // TODO: update to specific repo
     imageSrc: `${import.meta.env.BASE_URL}images/pmf.jpg`, 
@@ -93,7 +94,8 @@ export const projects: Project[] = [
     id: 'stock-trading-sim',
     title: 'Stock Trading Simulation Environment',
     description:
-      'Developed a custom OpenAI Gym trading environment with a random forest regression baseline, incorporating 20+ technical indicators on 5+ years of historical data to model and evaluate strategy performance.',
+      'Built an event-driven quantitative trading simulator across the S&P 100 using intraday yfinance data, APScheduler, Google Cloud Storage persistence, and 15-minute trading cycles.',
+      'Trained a RandomForestRegressor with causal rolling features, transaction costs, slippage, backtesting, and walk-forward OOS metrics including Sharpe, drawdown, win rate, and equity curves.',     
     tags: ['Python', 'NumPy', 'Simulation', 'Finance'],
     github: 'https://github.com/blade9523411/Stock-Trading-Simulation', // TODO: update to specific repo
     imageSrc: `${import.meta.env.BASE_URL}images/stock.jpg`, 
@@ -146,9 +148,9 @@ export const experience: ExperienceItem[] = [
     period: '2024 – 2025',
     location: 'San Francisco, CA',
     bullets: [
-      'Engineered automation workflows for sales operations, eliminating repetitive manual processes and improving team efficiency by 96%.',
-      'Maintained and optimized CRM data pipelines across 300+ hospital records to support targeted outreach',
-      
+      'Built Python automation scripts for sales workflows, eliminating manual processes and saving 6–8 hours/week per representative.',
+      'Developed data-cleaning workflows for scraped healthcare datasets, standardizing hospital, contact, and sales metadata before CRM ingestion and downstream analytics.',
+      'Structured and maintained CRM data for 300+ hospitals, supporting scalable, analytical sales operations and outreach targeting.',
     ],
     tags: ['Data Engineering', 'Automation', 'Data Pipelines', 'CRM Systems'],
   },
