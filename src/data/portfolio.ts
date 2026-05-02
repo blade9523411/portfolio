@@ -95,7 +95,7 @@ export const projects: Project[] = [
   },
   {
     id: 'stock-trading-sim',
-    title: 'Stock Trading Simulation Environment',
+    title: 'Event-Driven Quant Trading System',
     description:[
       'Built an event-driven quantitative trading simulator across the S&P 100 using intraday yfinance data, APScheduler, Google Cloud Storage persistence, and 15-minute trading cycles.',
       ' Trained a RandomForestRegressor with causal rolling features, transaction costs, slippage, backtesting, and walk-forward OOS metrics including Sharpe, drawdown, win rate, and equity curves.',     
@@ -107,13 +107,14 @@ export const projects: Project[] = [
   },
   {
     id: 'marine-robotics-rl',
-    title: 'Humanoids-Legs RL',
+    title: 'Raw Socket Server',
     description:[
-      'Worked on developing the Reinforcement Learning algorithm for the Humanoids-Legs .',
+      'Built a concurrent TCP server in C with select()-based multiplexing for scalable multi-client handling',
+      'Benchmarked latency and throughput under load (avg, p95, p99 RTT, RPS, failure rate) using a custom stress-testing harness',
     ],
     tags: ['Python', 'PyTorch', 'Robotics', 'RL', 'Sim-to-Real'],
-    github: 'https://github.com/jlalukota', // TODO: update to specific repo
-    imageSrc: `${import.meta.env.BASE_URL}images/marine-robotics.jpg`,
+    github: 'https://github.com/blade9523411/raw_socket_server/', // TODO: update to specific repo
+    imageSrc: `${import.meta.env.BASE_URL}images/tcpdemo.png`,
     imageAlt: 'Marine robotics RL — simulated underwater robot',
   },
 ]
