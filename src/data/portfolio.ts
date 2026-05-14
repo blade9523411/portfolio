@@ -40,7 +40,7 @@ export const personal = {
   aboutBio: `I'm a computer science student at UW-Madison with a focus on systems programming, machine learning infrastructure, and developer tooling.
 
 Outside of code, I've taught computing to seniors and children in my community, worked on a humanoid robot, and cooking good food.`,
-  github: 'https://github.com/blade9523411',
+  github: 'https://github.com/jlalukota',
   linkedin: 'https://linkedin.com/in/jlalukota', 
   resume: 'https://docs.google.com/document/d/16A3hFAKmJXwg6nNDJ1eiNRj4N1RXl8oQ/edit?usp=sharing&ouid=109757494867224820483&rtpof=true&sd=true',
   email: 'jlalukota@gmail.com',
@@ -68,7 +68,7 @@ export const projects: Project[] = [
       ' Replaced native Job retries with controller-driven run lineage and idempotent reconciliation, validating recovery across 25+ workloads and 30+ failure scenarios.',
     ],
     tags: ['Go', 'Kubernetes', 'Operators', 'ML Ops', 'Docker'],
-    github: 'https://github.com/blade9523411/ml-training-controller', // TODO: update to specific repo
+    github: 'https://github.com/jlalukota/ml-training-controller', // TODO: update to specific repo
     imageSrc: `${import.meta.env.BASE_URL}images/imagek8.png`,
     imageAlt: 'Kubernetes ML Training Controller — architecture diagram',
   },
@@ -89,7 +89,7 @@ export const projects: Project[] = [
       'Architected a deterministic scoring engine that normalizes company records into five sub-scores: digital maturity, operational complexity, information flow, market pressure, and revenue-based budget capacity.',
     ],
     tags: ['Python', 'React', 'PostgreSQL', 'Data Analysis'],
-    github: 'https://github.com/blade9523411/middleware_scoring', // TODO: update to specific repo
+    github: 'https://github.com/jlalukota/middleware_scoring', // TODO: update to specific repo
     imageSrc: `${import.meta.env.BASE_URL}images/pmf.jpg`, 
     imageAlt: 'PMF Finder — dashboard screenshot',
   },
@@ -101,7 +101,7 @@ export const projects: Project[] = [
       ' Trained a RandomForestRegressor with causal rolling features, transaction costs, slippage, backtesting, and walk-forward OOS metrics including Sharpe, drawdown, win rate, and equity curves.',     
     ],
     tags: ['Python', 'NumPy', 'Simulation', 'Finance'],
-    github: 'https://github.com/blade9523411/Stock-Trading-Simulation', // TODO: update to specific repo
+    github: 'https://github.com/jlalukota/Stock-Trading-Simulation', // TODO: update to specific repo
     imageSrc: `${import.meta.env.BASE_URL}images/stock.jpg`, 
     imageAlt: 'Stock Trading Simulation — portfolio performance chart',
   },
@@ -113,7 +113,7 @@ export const projects: Project[] = [
       'Benchmarked latency and throughput under load (avg, p95, p99 RTT, RPS, failure rate) using a custom stress-testing harness',
     ],
     tags: ['C', 'POSIX Sockets', 'TCP/IP', 'Linux'],
-    github: 'https://github.com/blade9523411/raw_socket_server/', // TODO: update to specific repo
+    github: 'https://github.com/jlalukota/raw_socket_server/', // TODO: update to specific repo
     imageSrc: `${import.meta.env.BASE_URL}images/tcpdemo.png`,
     imageAlt: 'Marine robotics RL — simulated underwater robot',
   },
